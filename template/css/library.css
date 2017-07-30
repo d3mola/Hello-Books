@@ -1,0 +1,21 @@
+/*#8bc046
+ #16534e
+*/
+
+body {
+	background-color: #16534e;
+}
+
+h1 {
+	color: #8bc046;
+	margin-bottom: 60px;
+}
+
+p {
+	color: white;
+	margin-bottom: 40px;
+}
+
+img {
+	margin-right: 2px;
+}

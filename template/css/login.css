@@ -2,3 +2,7 @@ body {
 	background-color: #16534e;
 	/*background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_embroidery.png)*/
 }
+
+a {
+	color: #16534e;
+}
