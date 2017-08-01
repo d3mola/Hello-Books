@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-	color: #8bc046;
+	color: #fff;
 	margin-bottom: 60px;
 }
 
@@ -18,4 +18,8 @@ p {
 
 img {
 	margin-right: 2px;
+}
+
+h4 {
+	color: white;
 }
