@@ -1,7 +1,9 @@
 body {
-	background-color: #fff;
+	background-color: #16534e;
+	font-family: 'Quicksand', sans-serif;
+	color: white;
 }
 
-.row {
+.btn {
 	margin-bottom: 40px;
 }
