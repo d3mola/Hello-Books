@@ -1,0 +1,10 @@
+body {
+	background-color: #16534e;
+	font-family:  'Quicksand', sans-serif;
+	color: black;
+	/*background-image: url(http://storage.capita-software.co.uk/cmsstorage/capita/media/solutions/libraries/libraries_lms.jpg?ext=.jpg)*/
+}
+
+nav a{
+	color: #fff;
+}
