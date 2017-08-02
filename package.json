@@ -1,0 +1,33 @@
+{
+  "name": "hello-books",
+  "version": "1.0.0",
+  "description": "A simple app to manage a library",
+  "main": "app.js",
+  "scripts": {
+    "start:dev": "nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d3mola/Hello-Books.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "javascript"
+  ],
+  "author": "Ademola Ariya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d3mola/Hello-Books/issues"
+  },
+  "homepage": "https://github.com/d3mola/Hello-Books#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
