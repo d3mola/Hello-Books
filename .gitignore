@@ -1,4 +1,5 @@
 /node_modules
 /idea.md
 /npm-debug.log
+/server/config/config.json
 .DS_Store
