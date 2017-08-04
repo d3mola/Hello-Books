@@ -19,4 +19,7 @@ app.get('*', (req, res) => res.status(200).send({
   message: 'Welcome to the beginning of nothingness yo.',
 }));
 
+app.get('/signin', (req, res) => {
+	res.send('hello world');
+})
 module.exports = app;

@@ -4,6 +4,14 @@ body {
 	color: white;
 }
 
+div img {
+	visibility: hidden;
+}
+
 button {
 	margin-top: 10px;
+}
+
+.hidder{
+	margin: 0, auto;
 }
