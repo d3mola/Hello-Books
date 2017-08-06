@@ -1,23 +1,27 @@
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define('User', {
-    username: {
+  const Book = sequelize.define('Book', {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    password: {
+    author: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
+    category: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    quantity: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    }
   });
-  User.associate = (models) => {
-    User.hasMany(models.Book, {
+   Book.associate = (models) => {
+    Book.belongsTo(models.User, {
       foreignKey: 'userId',
-      as: 'books',
+      onDelete: 'CASCADE',
     });
   };
-  return User;
+  return Book;
 };
