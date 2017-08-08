@@ -10,6 +10,15 @@ module.exports = {
       username: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: true,
+      },
+      firstname: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      lastname: {
+        type: Sequelize.STRING,
+        allowNull: false,
       },
       password: {
         type: Sequelize.STRING,
@@ -18,6 +27,12 @@ module.exports = {
       email: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: true,
+      },
+      access: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        defaultValue: 'user',
       },
       createdAt: {
         allowNull: false,
