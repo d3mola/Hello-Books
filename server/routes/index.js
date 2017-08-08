@@ -7,15 +7,19 @@ module.exports = (app) => {
   }));
 
   app.post('/api/users/signup', usersController.create);
-  app.post('/api/users/signin', usersController.login);  
+  app.post('/api/users/signin', usersController.login);// not working yet
   
   // Route to add a book
   app.post('/api/books', booksController.create);
-  //app.put('/api/books/<bookId>', booksController.login);
+
+
+  app.put('/api/books/:bookId', booksController.update);
 
   // Route to get all books in the library
   app.get('/api/books', booksController.list);
-  //app.get(' /api/users/<userId>/books?returned=false', booksController.login);
+
+
+  //app.get('/api/users/<userId>/books?returned=false', booksController.login);
   //app.post('/api/users/<userId>/books', booksController.login);
   //app.put('/api/users/<userId>/books', booksController.login);
 };
