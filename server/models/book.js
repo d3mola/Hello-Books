@@ -3,6 +3,11 @@ module.exports = (sequelize, DataTypes) => {
     title: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'title field is empty'
+        }
+      },
     },
     author: {
       type: DataTypes.STRING,
@@ -15,12 +20,11 @@ module.exports = (sequelize, DataTypes) => {
     quantity: {
       type: DataTypes.INTEGER,
       allowNull: false,
-    }
+    },
   });
    Book.associate = (models) => {
     Book.belongsTo(models.User, {
       foreignKey: 'userId',
-      onDelete: 'CASCADE',
     });
   };
   return Book;

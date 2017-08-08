@@ -31,13 +31,12 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      todoId: {
+      userId: {
         type: Sequelize.INTEGER,
-        onDelete: 'CASCADE',
         references: {
           model: 'Users',
           key: 'id',
-          as: 'bookId',
+          as: 'userId',
         },
       },
     }),
