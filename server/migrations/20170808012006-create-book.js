@@ -40,7 +40,6 @@ module.exports = {
         },
       },
     }),
-  down: (queryInterface /* , Sequelize */) =>
-    queryInterface.dropTable('Books'),
+  down: (queryInterface /* , Sequelize */) => queryInterface.dropTable('Books'),
 };
   

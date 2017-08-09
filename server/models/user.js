@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         notEmpty: {
           msg: 'password field is empty'
-        },
+        }, 
         len: [6,20],
       },
     },
@@ -80,6 +80,8 @@ module.exports = (sequelize, DataTypes) => {
         user.password = bcrypt.hashSync(user.password, salt);
       }
     },
+
+
   });
   User.associate = (models) => {
     User.hasMany(models.Book, {
@@ -87,5 +89,17 @@ module.exports = (sequelize, DataTypes) => {
       as: 'books',
     });
   };
+
+  User.associate = (models) => {
+    User.hasMany(models.History, {
+      foreignKey: 'userId',
+      as: 'histories',
+    });
+  };
+
+  User.prototype.validPassword = (password) => {
+    return bcrypt.compareSync(password, this.password);
+  };
+
   return User;
 };

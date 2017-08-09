@@ -14,9 +14,10 @@ module.exports = {
       .then(user => res.status(201).send(user))
       .catch(error => res.status(400).send(error.toString()));
   }, // end of create user i.e user signup controller
+  
   login(req, res) {
     return User
-      .create({
+      .findOne({
         username: req.body.username,
         password: req.body.password,
       })
@@ -24,3 +25,11 @@ module.exports = {
       .catch(error => res.status(400).send(error));
   }, // end of user login
 };
+
+
+/**
+ * .create({
+        username: req.body.username,
+        password: req.body.password,
+      })
+ */
