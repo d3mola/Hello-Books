@@ -27,7 +27,7 @@
     "comma-dangle": 0,
     "curly": ["error", "multi-line"],
     "import/no-unresolved": 0,
-    "max-len": [2, 80, 2],
+    "max-len": [2, 100, 2],//80 normally
     "no-shadow": ["error", { "allow": ["req", "res", "err"] }],
     "import/no-extraneous-dependencies": [
       2,

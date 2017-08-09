@@ -1,6 +1,6 @@
 const Book = require('../models').Book;
 
-module.exports = {
+module.exports = { 
   create(req, res) {
     return Book
       .create({
@@ -38,10 +38,10 @@ module.exports = {
 
         return book
           .update({
-            title: req.body.title || book.title,
-            author: req.body.author || book.author,
-            category: req.body.category || book.category,
-            quantity: req.body.quantity || book.quantity,
+            title: req.body.title,// || book.title,
+            author: req.body.author,// || book.author,
+            category: req.body.category,// || book.category,
+            quantity: req.body.quantity,// || book.quantity,
           })
           .then(updatedBook => res.status(200).send(updatedBook))
           .catch(error => res.status(400).send(error.toString()));

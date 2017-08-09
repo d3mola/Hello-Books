@@ -1,5 +1,7 @@
 const usersController = require('../controllers').users;
 const booksController = require('../controllers').books;
+const historiesController = require('../controllers').histories;
+
 
 module.exports = (app) => {
   app.get('/api', (req, res) => res.status(200).send({
@@ -7,19 +9,24 @@ module.exports = (app) => {
   }));
 
   app.post('/api/users/signup', usersController.create);
-  app.post('/api/users/signin', usersController.login);// not working yet
+  //app.post('/api/users/signin', usersController.login);// not working yet
   
   // Route to add a book
   app.post('/api/books', booksController.create);
 
-
+  // Route to update book info
   app.put('/api/books/:bookId', booksController.update);
 
   // Route to get all books in the library
   app.get('/api/books', booksController.list);
 
-
+  //An API route that allow users to get all the books 
+  //that the user has borrowed but has not returned
   //app.get('/api/users/<userId>/books?returned=false', booksController.login);
-  //app.post('/api/users/<userId>/books', booksController.login);
+
+  //An API route that allow user to borrow a book
+  app.post('/api/users/:userId/books', historiesController.borrow);
+
+  //An API route that allow user to return a book
   //app.put('/api/users/<userId>/books', booksController.login);
 };
