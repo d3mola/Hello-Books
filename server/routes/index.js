@@ -28,5 +28,5 @@ module.exports = (app) => {
   app.post('/api/users/:userId/books', historiesController.borrow);
 
   //An API route that allow user to return a book
-  //app.put('/api/users/<userId>/books', booksController.login);
+  app.put('/api/users/:userId/books', historiesController.update);
 };
