@@ -31,4 +31,29 @@ module.exports = {
           .catch(error => res.status(400).send(error.toString()));
       })
   },
+
+  // controller to return a  book
+  update(req, res) {
+    return Book
+      .find({
+        where: {
+          id: req.body.bookId,
+        },
+      })
+      .then(book => {
+        if (!book) {
+          return res.status(404).send({
+            error: 'You don\'t have this book',
+          });
+        }
+        return History
+          .update({
+            returnStatus: req.body.returnStatus,
+            bookId: req.body.bookId,
+            userId: req.params.userId,
+          })
+          .then(returned => res.status(200).send(returned))
+          .catch(error => res.status(404).send(error));
+      })
+  }
 };
