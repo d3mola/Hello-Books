@@ -1,4 +1,4 @@
-{
+module.exports = {
   "development": {
     "username": "postgres",
     "password": "@Lavezzi2",
@@ -22,6 +22,6 @@
     "host": "127.0.0.1",
     "port": 5432,
     "dialect": "postgres",
-    "use_env_variable": "process.env.DATABASE_URL"
+    "use_env_variable": process.env.DATABASE_URL
   }
 }
