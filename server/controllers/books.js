@@ -1,4 +1,6 @@
-import Book from '../models/Book';
+import db from '../models';
+
+const Book = db.Book;
 
 export default { 
   create(req, res) {

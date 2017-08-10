@@ -1,4 +1,6 @@
-import User from '../models/User';
+import db from '../models';
+
+const User = db.User;
 
 export default {
   create(req, res) {
