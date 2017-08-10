@@ -1,9 +1,9 @@
-const usersController = require('../controllers').users;
-const booksController = require('../controllers').books;
-const historiesController = require('../controllers').histories;
+import usersController from'../controllers/users';
+import booksController from '../controllers/books';
+import historiesController from '../controllers/histories';
 
 
-module.exports = (app) => {
+export default (app) => {
   app.get('/api', (req, res) => res.status(200).send({
     message: 'Welcome to the Hello Books!',
   }));

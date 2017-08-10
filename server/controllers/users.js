@@ -1,6 +1,6 @@
-const User = require('../models').User;
+import User from '../models/User';
 
-module.exports = {
+export default {
   create(req, res) {
     return User
       .create({
@@ -25,11 +25,3 @@ module.exports = {
       .catch(error => res.status(400).send(error));
   }, // end of user login
 };
-
-
-/**
- * .create({
-        username: req.body.username,
-        password: req.body.password,
-      })
- */

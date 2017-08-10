@@ -1,6 +1,6 @@
-const Book = require('../models').Book;
+import Book from '../models/Book';
 
-module.exports = { 
+export default { 
   create(req, res) {
     return Book
       .create({
