@@ -1,9 +1,9 @@
-const users = require('./users');
-const books = require('./books');
-const histories = require('./histories');
+import users from './users';
+import books from './books';
+import histories from './histories';
 
 
-module.exports = {
+export default {
   users,
   books,
   histories,

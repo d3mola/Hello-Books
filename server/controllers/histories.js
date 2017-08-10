@@ -1,8 +1,8 @@
-const History = require('../models').History;
-const Book = require('../models').Book;
-//const User = require('../models').User;
+import History from '../models/History';
+import Book from '../models/Book';
+//import User from '../models/User';
 
-module.exports = {
+export default {
   borrow(req, res) {
     return Book
       .find({
