@@ -1,4 +1,4 @@
-{
+module.exports = {
   "development": {
     "username": "postgres",
     "password": "@Lavezzi2",
@@ -21,6 +21,7 @@
     "database": "hellobooksdb_production",
     "host": "127.0.0.1",
     "port": 5432,
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "use_env_variable": process.env.DATABASE_URL
   }
 }
