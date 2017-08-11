@@ -1,6 +1,7 @@
-import History from '../models/History';
-import Book from '../models/Book';
-//import User from '../models/User';
+import db from '../models';
+
+const Book = db.Book;
+const History = db.History;
 
 export default {
   borrow(req, res) {
